@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tasbik</title>
+    <style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+
+.demopadding {
+  margin:50px 10px;
+  width:140px;
+  text-align:left;
+  display: flex;
+}
+.icon {
+  border:1px solid #ffffff;
+	position:relative;
+	text-align:center;
+	width:0px;
+	height:0px;
+	padding:20px;
+	border-top-right-radius: 	20px;
+	border-top-left-radius: 	20px solid;
+	border-bottom-right-radius: 20px solid;
+	border-bottom-left-radius: 	20px solid; 
+	-moz-border-radius: 		20px 20px 20px 20px;
+	-webkit-border-radius: 		20px 20px 20px 20px;
+	-khtml-border-radius: 		20px 20px 20px 20px; 	
+	color:#FFFFFF;
+}
+.icon i {
+	font-size:20px;
+	position:absolute;
+	left:9px;
+	top:5px;
+}
+.icon.social {
+  
+	float:left;
+	margin:0 3px 0 0;
+	cursor:pointer;
+	background:transparent;
+	color:#fcfcfc;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 	
+}
+
+.icon.social.fb i {
+	left:13px;
+	top:7px;
+}
+.icon.social.tw i {
+	left:11px;
+    top:7px;
+}
+.icon.social.in i {
+	left:11px;
+    top:7px;
+	background-color: transparent;
+}
+
+#img-logo{
+    margin-top: 10% !important;
+}
+
+#content{
+    margin-top:18%;
+}
+
+
+#d-content{
+    color:#7a7a7e;
+    margin-top:20%;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" style="background-Color:'#f9f9f9' ;padding-left: 0;">
+        <div class="row">
+           <div class="col-lg-6">
+            <div class="container-fluid"  style="background-image: url('./static/images/1.jpg');position:'cover'">
+
+                <div class="container-fluid" >
+                    <div class="row" >
+                    <div class="col-6 col-sm-6 col-xs-6" id='img-logo'>
+                         <img src="./static/images/logo3.jpeg" width="70%"/>
+                    </div>
+                    <div class="col-6 col-sm-6 col-xs-6" id='img-logo'>
+                        <img src="./static/images/logo.png" width="100%"/> 
+                    </div>
+                    </div>
+                </div>
+   
+                <div  class="container"  id='content'>
+                <div>
+                  <h3 class="text-white">Check the Status</h3>
+                  <br/>
+                  <p class="text-white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout .The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                </div>
+                </div>
+   
+                <div class='demopadding'>
+                   <div class='icon social fb'><i class="fa fa-facebook-f" style="font-size:25px"></i></div>
+                   <div class='icon social tw'><i class="fa fa-twitter" style="font-size:25px"></i></div>
+                   <div class='icon social in'><i class="fa fa-linkedin" aria-hidden="true" style="font-size:25px"></i></div>
+                </div>  
+                <div  class="container">
+                    <div   class="row">
+                       <div class="col-4 col-sm-4">
+                           <p class="text-white">Privacy Policy</p>
+                       </div>
+                       <div class="col-4 col-sm-4">
+                           <p class="text-white">Contact</p>
+                       </div>
+                       <div class="col-4 col-sm-4">
+                           <p class="text-white">&copy; 2021 DexignZone</p>
+                       </div>
+                    </div>
+               </div>
+               <br/>
+              </div>
+           </div>
+           <div class="col-lg-6">
+            <div style="color: '#636363'">
+                <h4 class="text-center fw-bold" id='d-content'>{{msg}}</h4> 
+                    <p class="text-center" style="margin-top: 20%;">
+                      <a href="/login">Back to login again</a>
+                    </p>
+                  </div>
+               
+           </div>
+        </div>
+        </div>
+     </div>
+     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+  </body>
+</html>

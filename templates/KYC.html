@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tasbik</title>
+    <style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.KYC{
+        width: 400px;
+        padding: 30px 20px 30px 20px;
+        border: 1px solid #BFBFBF;
+        background-color:white;
+        box-Shadow: 10px 10px 5px #aaaaaa;
+       
+}
+
+    </style>
+  </head>
+  <body>
+    <div style="display:flex; align-items:center; justify-Content:center; margin-top:10%">
+        <div class='KYC'>
+          <div class="col text-center"> <img width='70%' src="./static/images/logo1.png"/> </div>
+          {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <h5 class="text-center" style="color:red;">{{ message }}</h5>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+          <h6 class="text-center fw-bold" style="color:#636363">Vérification de votre compte.<br/>
+      Veuillez entrer le code à 4 chiffres reçu par SMS</h6>
+          <br/>
+          <form action="" method="post">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label fw-bold" style="color:#636363">Code</label>
+              <input name="otp" max="9999" type="number" class="form-control" id="exampleInputPassword1" placeholder="OTP" />
+              <br/>
+              <div class="col text-center">
+                <button type="submit" style='padding:10px 100px;backgroundColor:#27D26B;border:none;width:100%;borderRadius:30px' class="btn btn-success">Unlock</button>
+              </div>
+            </div>  
+          </form>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
