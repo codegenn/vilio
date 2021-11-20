@@ -9,7 +9,7 @@ on:
 # Starts jobs and sets the type of runner (Windows) they will run on
 jobs:
   build-and-deploy-to-azure:
-    runs-on: windows-2022
+    runs-on: windows-2016
 
     steps:
 
