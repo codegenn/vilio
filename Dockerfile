@@ -1,12 +1,12 @@
 # Sample Dockerfile
 
 # Indicates that the windowsservercore image will be used as the base image.
-FROM python:3.7
+FROM python
 
 COPY ./* /tsbk
 # Copy the requirements and install
 COPY requirements.txt /requirements.txt 
-RUN pip3 install -r /requirements.txt
+RUN pip install -r /requirements.txt
 # Expose your port
 EXPOSE 80
 # Set the working directory to your main file
