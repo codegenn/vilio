@@ -1,9 +1,9 @@
 # Sample Dockerfile
 
 # Indicates that the windowsservercore image will be used as the base image.
-FROM python:3.6.1
+FROM python:3
 
-# RUN pip install --upgrade pip --user
+RUN pip install --upgrade pip --user
 
 COPY . /tsbk
 # Copy the requirements and install
