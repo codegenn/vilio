@@ -3,7 +3,7 @@
 # Indicates that the windowsservercore image will be used as the base image.
 FROM python
 
-COPY ./* /tsbk
+COPY . /tsbk
 # Copy the requirements and install
 COPY requirements.txt /requirements.txt 
 RUN pip install -r /requirements.txt
