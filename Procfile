@@ -1,0 +1,1 @@
+web: gunicorn tsbk:app --log-file -
