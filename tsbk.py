@@ -26,22 +26,40 @@ def index():
 
 @app.route('/kyc', methods=['GET','POST'])
 def kyc():
-    res = session['res']
-    if request.method == 'POST':    
-        otp = request.form['otp']
-        try:
-            if str(otp) == str(res['code']):
-                return redirect(url_for('index'))
-        except:
-            flash("Erreur de Twilio.")
-            return render_template("KYC.html")
-    return render_template("KYC.html")
+    try:
+        res = session['res']
+        print(session['phoneno'])
+        fdigit = str(session['phoneno'])[0:4]
+        ldigit = str(session['phoneno'])[-3:]
+        tphone = fdigit +"***"+ldigit
+        if request.method == 'POST':    
+            otp = request.form['otp']
+            try:
+                if str(otp) == str(res['code']):
+                    return redirect(url_for('index'))
+                else:
+                    flash("Entrez le code est invalide.")
+            except:
+                flash("Erreur de Twilio.")
+                return render_template("KYC.html")
+
+        return render_template("KYC.html",tphone = tphone)
+    except:
+        return redirect(url_for('login'))
+
+@app.route('/resend',methods=['GET'])
+def resend_otp():
+    session['res'] = otp_fun(session['phoneno'])
+    return redirect(url_for("kyc"))
+
 
 
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
-        rec = validateUser(request.form['name'],request.form['firstname'],request.form['cin'],request.form['tphone'],table_employes)
+        name = request.form['name']
+        lastname = request.form['firstname']
+        rec = validateUser(name.upper(),lastname.upper(),request.form['cin'],request.form['tphone'],table_employes)
         if rec:
             if rec["status"]:
                 session['employe_id'] = rec['data']['id']

@@ -135,15 +135,7 @@ code {
                     </div>
                     </div>
                 </div>
-   
-                <div  class="container"  id='content'>
-                <div>
-                  <h3 class="text-white">Check the Status</h3>
-                  <br/>
-                  <p class="text-white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout .The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                </div>
-                </div>
-   
+            <br><br><br><br><br><br><br><br><br><br>
                 <div class='demopadding'>
                    <div class='icon social fb'><i class="fa fa-facebook-f" style="font-size:25px"></i></div>
                    <div class='icon social tw'><i class="fa fa-twitter" style="font-size:25px"></i></div>
@@ -172,8 +164,8 @@ code {
                 <h4  class="fw-bold" style="Color:#7d7d7e">Bienvenue,<br/>
                 {{ lastname }} {{ name }} 
                 <br/>{{CIN}}</h4>
-                <h5 id="gre" class="text-center" style="color:red;margin-top: 5%;display: none;">Enter ammount is greater.<br>Please Enter the correct amount.</h5>
-                <h5 id="less"class="text-center" style="color:red;margin-top: 5%;display: none;">Enter amount is less.</h5>
+                <h5 id="gre" class="text-center" style="color:red;margin-top: 5%;display: none;">Veuillez saisir un montant inférieur au solde disponible.</h5>
+                <h5 id="less"class="text-center" style="color:red;margin-top: 5%;display: none;">le montant entré est incorrect.</h5>
                   
                 <h4  class="text-center fw-bold" style="Color:#7d7d7e;margin-top:10%">Votre montant d'acompte disponible est de :</h4>
                     <h4 class="text-center fw-bold" style="Color:#7d7d7e;"id="balance">{{ balance }} Dhs</h4>
@@ -275,12 +267,11 @@ Veuillez entrer le code à 4 chiffres reçu par SMS</h6>
             // e.preventDefault();
             console.log("");
           }
-          else if (etbalance < actbalance ){
-            console.log("");
-            // e.preventDefault();
-            // $("#gre").css({display: "None"});
-            // $("#less").css({display: "block"});
-          }
+          else if(etbalance < 0){
+            e.preventDefault();
+            $("#less").css({display: "block"});
+            $("#gre").css({display: "None"});
+          } 
       });      
     </script>
   </body>

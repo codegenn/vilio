@@ -6,8 +6,9 @@ import time
 def otp_fun(tphone):
     try:
         otp = random.randint(1000,9999)
-        account_sid = "**********************"
-        auth_token = "*******************"
+        # print("Your otp is - ",otp)
+        account_sid = "AC5dab87193816f29daed7e8280a8857aa"
+        auth_token = "6c9147b1fcf0d536eae2f5167a3566e3"
         client = Client(account_sid, auth_token)
         message = client.messages.create(
                 body='Le code de vérification Tasbiq est le : ' + str(otp),

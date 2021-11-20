@@ -43,28 +43,27 @@ code {
           {% with messages = get_flashed_messages() %}
       {% if messages %}
         {% for message in messages %}
-          <h5 class="text-center" style="color:red;">{{ message }}</h5>
+          <h6 class="text-center" style="color:red;">{{ message }}</h6>
         {% endfor %}
       {% endif %}
     {% endwith %}
           <h6 class="text-center fw-bold" style="color:#636363">Vérification de votre compte.<br/>
-      Veuillez entrer le code à 4 chiffres reçu par SMS</h6>
+      Veuillez entrer le code à 4 chiffres reçu par SMS au numéro {{tphone}}
+    </h6>
           <br/>
           <form action="" method="post">
-            <div class="mb-3">
+            <div class="mb-2">
               <label for="exampleFormControlInput1" class="form-label fw-bold" style="color:#636363">Code</label>
-              <input name="otp" max="9999" type="number" class="form-control" id="exampleInputPassword1" placeholder="OTP" />
-              <br/>
+              <input name="otp" required type="text" maxlength="4" class="form-control" id="exampleInputPassword1" />
+			<p style="color:#636363">Si vous n’avez pas reçu votre code par SMS<br><a  href="/resend">cliquez ici</a></p>
+              
               <div class="col text-center">
-                <button type="submit" style='padding:10px 100px;backgroundColor:#27D26B;border:none;width:100%;borderRadius:30px' class="btn btn-success">Unlock</button>
+                <button type="submit" style='padding:10px 100px;backgroundColor:#27D26B;border:none;width:100%;borderRadius:30px' class="btn btn-success">Valider</button>
               </div>
             </div>  
           </form>
         </div>
       </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
   </body>
 </html>
