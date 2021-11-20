@@ -191,7 +191,6 @@ sqlite3-to-mysql==1.4.1
 sqlparse==0.4.1
 starkbank-ecdsa==2.0.0
 static3==0.7.0
-TA-Lib @ file:///C:/Users/USER/OneDrive/Desktop/vcodify/2021/Dr%20Akshay%20R/TA_Lib-0.4.21-cp39-cp39-win_amd64.whl
 tablib==3.0.0
 tabulate==0.8.9
 termcolor==1.1.0
