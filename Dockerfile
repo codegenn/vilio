@@ -5,7 +5,8 @@ FROM python:3.8.9
 
 COPY . /tsbk
 # Copy the requirements and install
-COPY requirements.txt /requirements.txt 
+COPY requirements.txt /requirements.txt
+RUN pip install --upgrade pip
 RUN pip3 install -r /requirements.txt
 # Expose your port
 EXPOSE 80
