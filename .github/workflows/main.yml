@@ -15,3 +15,5 @@ jobs:
 
     # Checks out repository so your workflow can access it
     - uses: actions/checkout@v1
+    - name: build project
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
