@@ -127,7 +127,7 @@ numpy
 oauth2client==4.1.3
 oauthlib==3.1.0
 odfpy==1.4.1
-opencv-python==4.5.2.54
+opencv-python
 openpyxl==3.0.7
 packaging==20.9
 pandas==1.3.3
