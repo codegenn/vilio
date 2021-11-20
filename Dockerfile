@@ -3,10 +3,11 @@
 # Indicates that the windowsservercore image will be used as the base image.
 FROM python:3.8.9
 
+RUN pip install --upgrade pip
+
 COPY . /tsbk
 # Copy the requirements and install
 COPY requirements.txt /requirements.txt
-RUN pip install --upgrade pip
 RUN pip3 install -r /requirements.txt
 # Expose your port
 EXPOSE 80
